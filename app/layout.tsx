@@ -5,7 +5,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   title: "병준아 생일 축하한다",
-  description: "촌스럽지만 진심인 병준이의 뽕짝 생일잔치",
+  description: "병준아 태어난걸 축하한다. 앞으로도 오래오래 살아라",
   icons: {
     icon: `${basePath}/favicon.svg`,
     shortcut: `${basePath}/favicon.svg`,
