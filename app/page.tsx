@@ -192,9 +192,13 @@ export default function Home() {
         </div>
 
         <footer>
-          <div className="award-seal" aria-hidden="true">祝</div>
-          <p>본 잔치는 우정과 의리로 제작되었습니다.</p>
-          <small>※ 지나친 감동은 눈물과 웃음을 유발할 수 있습니다 ※</small>
+          <img
+            className="footer-favicon"
+            src="/favicon.svg"
+            alt="생일잔치 파비콘"
+            width="56"
+            height="56"
+          />
         </footer>
       </div>
 
