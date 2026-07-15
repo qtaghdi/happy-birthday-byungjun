@@ -29,6 +29,10 @@ button {
   font: inherit;
 }
 
+input {
+  font: inherit;
+}
+
 .party-page {
   position: relative;
   min-height: 100svh;
@@ -198,6 +202,222 @@ button {
   color: #fffa00;
   font-size: 1.2em;
   animation: blink-text 0.65s steps(2, end) infinite;
+}
+
+.party-editor {
+  width: min(94%, 720px);
+  margin: 0.3rem auto 1.5rem;
+  padding: clamp(0.8rem, 3vw, 1.3rem);
+  color: #520036;
+  border: 5px ridge #fff36b;
+  background: linear-gradient(135deg, #ff68cb, #fff26c 48%, #ff8a1f);
+  box-shadow: 6px 7px 0 #65003f, 0 0 22px #fff200;
+  text-align: center;
+  transform: rotate(-0.5deg);
+}
+
+.party-editor h2 {
+  margin: 0;
+  color: #8a003d;
+  font-size: clamp(1.15rem, 4vw, 1.7rem);
+  font-weight: 950;
+  text-shadow: 2px 2px #fff, 0 0 8px #ffef00;
+}
+
+.editor-intro {
+  margin: 0.45rem 0 0.9rem;
+  font-family: "Apple SD Gothic Neo", Arial, sans-serif;
+  font-size: clamp(0.78rem, 2.6vw, 0.95rem);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.party-editor-form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.editor-field label,
+.share-output label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 950;
+}
+
+.editor-field input,
+.share-output input,
+.message-draft-row textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  color: #37002a;
+  border: 4px inset #ffcf32;
+  border-radius: 4px;
+  background: #fffbe2;
+  font-size: 1rem;
+  font-family: "Apple SD Gothic Neo", Arial, sans-serif;
+  font-weight: 800;
+}
+
+.editor-field input {
+  text-align: center;
+}
+
+.message-editor {
+  min-width: 0;
+  margin: 0;
+  padding: 0.7rem;
+  border: 4px double #9d004f;
+  background: rgba(255, 255, 255, 0.43);
+}
+
+.message-editor legend {
+  padding: 0 0.5rem;
+  color: #710041;
+  font-size: 0.95rem;
+  font-weight: 950;
+}
+
+.message-editor-help {
+  margin: 0 0 0.65rem;
+  font-family: "Apple SD Gothic Neo", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.message-editor-help code {
+  padding: 0.08rem 0.25rem;
+  color: #fff;
+  background: #87004d;
+  font-weight: 900;
+}
+
+.message-draft-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.message-draft-row {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) 2.5rem;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.message-draft-row label {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  color: #fff;
+  border-radius: 50%;
+  background: #b40059;
+  font-size: 0.8rem;
+  font-weight: 950;
+}
+
+.message-draft-row textarea {
+  min-height: 4rem;
+  resize: vertical;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.remove-message-button,
+.add-message-button,
+.editor-actions button {
+  cursor: pointer;
+  font-weight: 950;
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.remove-message-button {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #fff;
+  border: 3px outset #ff9eb7;
+  border-radius: 50%;
+  background: #a50028;
+}
+
+.add-message-button {
+  margin-top: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  color: #4a0038;
+  border: 3px outset #fff36b;
+  border-radius: 5px;
+  background: #fff200;
+  font-size: 0.8rem;
+}
+
+.add-message-button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.8);
+  opacity: 0.6;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.editor-actions button {
+  padding: 0.55rem 0.8rem;
+  color: #fff;
+  border: 4px outset #ffec63;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 #67002a;
+  font-size: clamp(0.75rem, 2.2vw, 0.95rem);
+}
+
+.preview-button {
+  background: linear-gradient(#ff376f, #b9004b);
+}
+
+.share-button {
+  background: linear-gradient(#7c35ff, #3f008d);
+}
+
+.remove-message-button:hover,
+.add-message-button:hover:not(:disabled),
+.editor-actions button:hover {
+  filter: brightness(1.25);
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.remove-message-button:active,
+.add-message-button:active,
+.editor-actions button:active {
+  border-style: inset;
+  transform: translateY(3px) scale(0.96);
+}
+
+.party-editor input:focus-visible,
+.party-editor textarea:focus-visible,
+.party-editor button:focus-visible {
+  outline: 4px solid #00f7ff;
+  outline-offset: 3px;
+}
+
+.editor-status {
+  min-height: 1.2em;
+  margin: 0;
+  color: #4d0047;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.share-output {
+  min-width: 0;
+  padding: 0.6rem;
+  border: 3px dashed #86004b;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.share-output input {
+  font-size: 0.72rem;
 }
 
 .birthday-card {
@@ -783,11 +1003,36 @@ footer {
     border-width: 6px;
   }
 
+  .editor-actions {
+    flex-direction: column;
+  }
+
+  .editor-actions button {
+    width: 100%;
+  }
+
+  .message-draft-row {
+    grid-template-columns: 1.7rem minmax(0, 1fr) 2.2rem;
+  }
+
+  .message-draft-row label {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .remove-message-button {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
   .floating-emoji {
     opacity: 0.75;
   }
 
-  .final-headline { line-height: 1.08; }
+  .final-headline {
+    font-size: clamp(1.25rem, 6vw, 2.4rem);
+    line-height: 1.08;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -22,7 +22,15 @@
 
 ### 💸 돈 많이 벌고 🍗 치킨 많이 먹고 🍻 오래오래 보자
 
-## [🚨 병준이 생일잔치 입장하기 🚨](https://qtaghdi.github.io/happy-birthday-byungjun/)
+## [🚨 병준이 생일잔치 입장하기 🚨](https://qtaghdi.github.io/happy-birthday/)
 
+### 🪩 이름 바꾸는 법 🪩
+
+[꾸미기 모드](https://qtaghdi.github.io/happy-birthday/?edit=1)에서 이름과 랜덤 축하 멘트를 입력한 뒤
+`공유 링크 만들기`를 누르면 됩니다.
+
+- 공유 링크에서는 편집기가 보이지 않습니다.
+- `{이름}`은 `병준아/병준이`, `민수야/민수가`처럼 조사에 맞춰 자동으로 바뀝니다.
+- 별도 서버나 데이터베이스 없이 URL에 설정을 담아 전달합니다.
 
 </div>
